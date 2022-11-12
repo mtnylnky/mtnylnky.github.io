@@ -1,0 +1,103 @@
+/*
+ * those CSS variables are defaults,
+ * there are here for documentation porpuse
+ */
+:root {
+    --color: #39ff14;
+    --background: #000;
+    --size: 1;
+    /* --glow: 1 */
+    --animation: terminal-blink;
+}
+
+@media screen and (max-width: 1200px) {
+    :root {
+        --size: 2.4;
+    }
+}
+
+@-webkit-keyframes terminal-smooth {
+    0%, 100% {
+        left: 0;
+        color: #0c0;
+        color: var(--original-color, #aaa);
+        background-color: #000;
+        background-color: var(--background, #000);
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        border: none;
+        padding: 0;
+        margin: 0;
+    }
+    50% {
+        left: 0;
+        color: #000;
+        background: #0c0;
+        -webkit-box-shadow: 0 0 5px var(--color, #aaa);
+        box-shadow: 0 0 5px var(--color, #aaa);
+        border: none;
+        padding: 0;
+        margin: 0;
+        border-bottom: 2px solid transparent;
+    }
+}
+@-moz-keyframes terminal-smooth {
+    0%, 100% {
+        left: 0;
+        color: #0c0;
+        color: var(--original-color, #aaa);
+        background-color: #000;
+        background-color: var(--background, #000);
+        -moz-box-shadow: none;
+        box-shadow: none;
+        border: none;
+        padding: 0;
+        margin: 0;
+    }
+    50% {
+        left: 0;
+        color: #000;
+        background: #0c0;
+        -mox-box-shadow: 0 0 5px var(--color, #aaa);
+        box-shadow: 0 0 5px var(--color, #aaa);
+        border: none;
+        padding: 0;
+        margin: 0;
+        border-bottom: 2px solid transparent;
+    }
+}
+@keyframes terminal-smooth {
+    0%, 100% {
+        left: 0;
+        color: #0c0;
+        color: var(--original-color, #aaa);
+        background-color: #000;
+        background-color: var(--background, #000);
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        border: none;
+        padding: 0;
+        margin: 0;
+    }
+    50% {
+        left: 0;
+        color: #000;
+        background: #0c0;
+        -webkit-box-shadow: 0 0 5px var(--color, #aaa);
+        box-shadow: 0 0 5px var(--color, #aaa);
+        border: none;
+        padding: 0;
+        margin: 0;
+        border-bottom: 2px solid transparent;
+    }
+}
+#css-cursor .terminal {
+    --background: #000;
+    --color: #0c0;
+    --animation: terminal-smooth;
+    text-shadow: 0 0 3px rgba(0,100,0,0.5);
+}
+/* below can be removed in version >= 2.1.0 */
+#css-cursor .cmd .cursor-line {
+    overflow: visible;
+}
